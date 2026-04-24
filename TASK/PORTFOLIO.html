@@ -1,0 +1,189 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #070a00;
+        }
+
+        header {
+            background: rgba(108, 75, 15, 0.575);
+            color: #fff;
+            text-align: center;
+        }
+
+        nav {
+            padding: 10px;
+            position:sticky;
+            text-align:center;
+            display: inline;
+            margin: 500px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            border-bottom: 3px solid #000102;
+            padding-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .profile-img {
+            display: block;
+            margin:auto;
+            border-radius: 60%;
+            border: 5px solid #cddf0500;
+            width: 150px;
+            height: 150px;
+            object-fit:cover;
+        }
+
+        table {
+            width: 100%;
+            border-collapse:separate;
+            margin-top: 30px;
+        }
+
+        table, th, td {
+            border: 1px solid #8c0e0e;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #090b09;
+            color: white;
+        }
+
+        form {
+            display: grid;
+            gap: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
+
+        button {
+            background: #cec9c9;
+            color: rgb(10, 9, 9);
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111111;
+            color: white;
+            margin-top: 40px;
+        }
+
+        mark { background-color: #82bbd9; border-radius: 5px; padding:auto; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>sudharhan portfolio</h1>
+    <p>Electronics and communication student</p>
+
+
+<nav>
+    
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    
+</nav>
+</header>
+<main>
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="photo/photo.jpeg" alt="Profile Picture" class="profile-img">
+        <p>
+            Hello! I am a <strong>dedicated</strong> student focused on building clean and functional web interfaces. 
+            I believe that <em>simplicity is the ultimate sophistication</em>. Currently, I am 
+            <mark>seeking an internship</mark>.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <ul>
+            <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript</li>
+            <li><strong>Backend:</strong> Python, Node.js</li>
+            <li><strong>Tools:</strong> Git, VS Code, Figma</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <table>
+            <tr>
+                <th>Project Name</th>
+                <th>Stack</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>Personal Blog</td>
+                <td>HTML/CSS</td>
+                <td><a href="#">View Code</a></td>
+            </tr>
+            <tr>
+                <td>Task Manager</td>
+                <td>JavaScript</td>
+                <td><a href="#">View Demo</a></td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <form onsubmit="showAlert(event)">
+            <input type="text" placeholder="Enter your name..." required>
+            <input type="email" placeholder="Enter your email..." required>
+            <textarea rows="5" placeholder="How can I help you?"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2026 sudhrashan Portfolio.</p>
+</footer>
+</body>
+</html>
