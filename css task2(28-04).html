@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creative App Ideas</title>
+
+<style>
+body{
+    background:#f6f7fb;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    padding:30px 50px;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+    color:purple;
+}
+
+.nav-links a{
+    margin-left:50px;
+    text-decoration:none;
+    color:black;
+    font-size:14px;
+    letter-spacing:1px;
+}
+
+.nav-links{
+    color:black;
+}
+.container{
+    display:flex;
+    align-items:center;
+    padding:10px;
+}
+.left{
+    width:55%;
+}
+
+.left h1{
+    font-size:28px;
+    color:yellowgreen;
+    margin-bottom:40px;
+}
+.skill{
+    margin-bottom:25px;
+}
+
+.skill p{
+    font-size:13px;
+    margin-bottom:8px;
+    color:black;
+}
+
+.bar{
+    width:100%;
+    height:10px;
+    background:#ddd;
+    border-radius:5px;
+}
+
+.fill{
+    height:100%;
+    border-radius:50px;
+}
+
+.fill.blue{
+    background:purple;
+}
+.fill.yellow{
+    background-color: yellow;
+}
+.fill.green{
+   background-color: black;
+}
+.fill.orange{
+    background:orangered;
+}
+
+.percent{
+    float:right;
+    font-size:13px;
+    color:black;
+}
+.right{
+    width:105%;
+    display:flex;
+    justify-content:center;
+}
+.phone{
+    width:260px;
+    height:480px;
+    background:gray;
+    border-radius:30px;
+    padding:20px;
+}
+.screen{
+    width:150%;
+    height:100%;
+    background:#f3f5ff;
+    border-radius:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.desc{
+    font-size:12px;
+    text-align:center;
+    color:#040000;
+    padding:0 20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">bridge</div>
+    <div class="nav-links">
+        <a href="#">HOME</a>
+        <a href="#">PAGES</a>
+        <a href="#">OUR SERVICES</a>
+        <a href="#"> CONTACT US </a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="left">
+        <h1>Creative App Ideas</h1>
+
+        <div class="skill">
+            <p>Information Architecture <span class="percent">100%</span></p>
+            <div class="bar">
+                <div class="fill yellow" style="width: 100%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>App Development <span class="percent">7%</span></p>
+            <div class="bar">
+                <div class="fill green" style="width:7%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>User Interface <span class="percent">42%</span></p>
+            <div class="bar">
+                <div class="fill orange" style="width:42%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>Total Memory Usage <span class="percent">65%</span></p>
+            <div class="bar">
+                <div class="fill blue" style="width:65%"></div>
+            </div>
+        </div>
+
+    </div>
+    <div class="right">
+        <div class="phone">
+            <div class="screen">
+                <img src="https://connect.theoppty.com/media/message_files/2026/04/28/home-1-phone-11.png"></div>
+                <p class="desc">Simple <strong>UI preview with creative design <mark>illustration</mark></strong></p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
