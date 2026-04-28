@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile Card</title>
+
+  <style>
+    body {
+      background: gray;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .card {
+      background: black;
+      width: 300px;
+      text-align: center;
+      padding: 30px 20px;
+      border-radius: 15px;
+    }
+
+    .profile-img {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      padding: 4px;
+      background: linear-gradient( gold, white);
+    }
+
+    .profile-img img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+
+    h2 {
+      color: #cac8c8;
+    }
+
+    .role {
+      color: gray;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    hr {
+      border-top: 1px solid #06cb65;
+      margin: 20px;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+    }
+
+    .stats h3 {
+      margin: auto;
+      color: #d7cfcf;
+    }
+
+    .stats p {
+      margin: 5px;
+      font-size: 12px;
+      color: gray;
+    }
+
+    button {
+      margin-top: 15px;
+      width: 90%;
+      padding: 10px;
+      border-radius: 55px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      background: linear-gradient(#7f0ce4, #e1b110);
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform:scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="profile-img">
+      <img src="ASSESTS" alt="Profile">
+    </div>
+    <h2>vignesh</h2>
+    <p class="role">Associate Engineer</p>
+    <hr>
+    <div class="stats">
+      <div>
+        <h3>1k</h3>
+        <p>Followers</p>
+      </div>
+      <div>
+        <h3>83</h3>
+        <p>Following</p>
+      </div>
+      <div>
+        <h3>12</h3>
+        <p>Projects</p>
+      </div>
+    </div>
+    <hr>
+    <button>Follow User</button>
+  </div>
+</body>
+</html>
