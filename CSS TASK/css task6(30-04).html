@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enabling What Matters</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #e9e9ef;
+}
+
+.section-title {
+    text-align: center;
+    padding: 40px 0 20px;
+    font-size: 28px;
+    color: #ff6a3d;
+    font-weight: 50;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+}
+
+.card {
+    height: 600px;
+    width: 300px;
+    background: #020817;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s linear;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit:auto;
+    transition: transform 0.4s linear;
+}
+
+.card-content {
+    padding: 20px;
+    color: #fff;
+}
+
+.card-content h3 {
+    margin: 20px;
+    font-size: 20px;
+}
+
+.card-content h3 span {
+    color: #ff6a3d;
+}
+
+.card-content p {
+    font-size: 19px;
+    line-height: 1.8;
+    color: #cbd5e1;
+}
+
+.card:hover {
+    transform: translateY(10px);
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+@media(max-width: 900px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
+</head>
+<body>
+
+<h2 class="section-title">Enabling What Matters</h2>
+
+<div class="container">
+
+    <div class="card">
+        <img src="https://s3.wns.com/S3_5/Images/industries/HEA/Continuous-Innovation.jpg" alt="">
+        <div class="card-content">
+            <h3><span>C</span>ontinuous Innovation</h3>
+            <p>
+                Innovate continuously to accelerate clinical and operational transformation 
+                with AI-powered systems and predictive models delivering next-level experiences.
+            </p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://s3.wns.com/S3_5/Images/industries/HEA/Operational-Dexterity.jpg" alt="">
+        <div class="card-content">
+            <h3><span>O</span>perational Dexterity</h3>
+            <p>
+                Scale effortlessly with AI, multilingual support, and globally distributed teams 
+                while simplifying complex workflows.
+            </p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://s3.wns.com/S3_5/Images/industries/HEA/Responsible-Evolution.jpg" alt="">
+        <div class="card-content">
+            <h3><span>R</span>esponsible Evolution</h3>
+            <p>
+                Adapt to regulatory shifts with AI compliance, fraud detection, and intelligent 
+                policy platforms ensuring risk mitigation.
+            </p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://s3.wns.com/S3_5/Images/industries/HEA/Ecosystem-Synergy.jpg" alt="">
+        <div class="card-content">
+            <h3><span>E</span>cosystem Synergy</h3>
+            <p>
+                Drive growth through ESG-aligned analytics, digital procurement, and workforce 
+                upskilling powered by strong partnerships.
+            </p>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
