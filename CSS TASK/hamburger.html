@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cacao Hero</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* HERO SECTION */
+.hero{
+    height:100vh;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:#000;
+}
+
+/* BACKGROUND IMAGE */
+.hero::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:url('banner-2.jpg') no-repeat center/cover;
+    opacity:0.6;
+    z-index:1;
+}
+
+/* CACAO IMAGE */
+.cacao-img{
+    position:relative;
+    width:700px;
+    max-width:90%;
+    z-index:2;
+    animation:float 4s ease-in-out infinite;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float{
+    0%{ transform:translateY(0); }
+    50%{ transform:translateY(-20px); }
+    100%{ transform:translateY(0); }
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .cacao-img{
+        width:320px;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<section class="hero">
+
+    <!-- CACAO DREAM IMAGE -->
+    <img src="cacao.png" class="cacao-img" alt="Cacao Dream">
+
+</section>
+
+</body>
+</html>
