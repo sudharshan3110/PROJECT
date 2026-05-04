@@ -1,0 +1,568 @@
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+    .chocolate{
+        background:url('https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/title-area-team.jpg');
+        height:100vh;
+        background-position: center;
+        background-size: cover;
+        position:relative;
+    }
+    header{
+        position:absolute;
+        width:100%;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:20px 30px;
+        z-index:10;
+    }
+    .logo img{
+        filter: brightness(0)invert(1);
+    }
+    nav a{
+        color:white;
+        margin: 30px;
+        text-decoration:none;
+        font-size:20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    nav a:hover{
+        text-decoration: underline;
+        color: #f4cfdf;
+    }
+    .icons a{
+        background-color:#f4cfdf;
+        color:black;
+        padding: 5px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600px;
+        margin-right: 5px;
+        font-size: 25px;
+        margin-top: 10px;       
+    }
+    .chocoimage{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+       
+    }
+    .chocoimage img{
+        animation:Glow 3s ease forwards;
+    }
+    @keyframes Glow{
+        from{
+            opacity:0;
+        }
+        to{ 
+            opacity:1;
+        }
+    }
+
+/* SECTION 2 */
+.section2{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:80px 10%;
+    background:#f4f4f4;
+    gap:80px;
+    position:relative;
+}
+
+/* DARK LABEL FOR LIGHT SECTION */
+.section2 .section-label{
+    color:#000;
+}
+
+.image-box{
+    flex:1;
+}
+
+.image-box img{
+    width:100%;
+    max-width:500px;
+    border:10px solid #fff;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    filter:grayscale(100%);
+}
+
+.text-box{
+    flex:1;
+}
+
+.text-box h1{
+    font-size:60px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight:900;
+    color:#333;
+    line-height:1.2;
+}
+
+.text-box p{
+    margin-top:20px;
+    color:#555;
+    font-size:18px;
+    line-height:1.6;
+}
+
+.btn{
+    margin-top:30px;
+    display:inline-block;
+    padding:15px 40px;
+    border:1px solid #000;
+    text-decoration:none;
+    color:#000;
+    letter-spacing:3px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:black;
+    color:white;
+}
+
+
+.gallery {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text overlay (only used on first image) */
+.overlay {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: rgba(245, 245, 245, 0.235);
+}
+
+.overlay h2 {
+  font-size: 48px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.overlay span {
+  font-style: italic;
+}
+
+/* Optional: make images equal height */
+.gallery {
+  height: 500px;
+}
+
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 60px 40px;
+  gap: 30px;
+  text-align: center;
+}
+
+.feature {
+  max-width: 250px;
+}
+
+/* Circle background */
+.image-wrap {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-wrap.blue {
+  background: #cfe8ef;
+}
+
+.image-wrap.pink {
+  background: #f6cdd6;
+}
+
+/* Image styling */
+.image-wrap img {
+  max-width: 140px;
+  height: 140px;
+  border-radius: 110%;
+}
+
+/* Title */
+.feature h3 {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.feature h3 span {
+  font-style: italic;
+  font-weight: 700;
+}
+
+/* Description */
+.feature p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+
+.video-hero {
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/video-background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Link wrapper styling */
+.play-button-link {
+    text-decoration: none;
+    outline: none;
+}
+
+.play-button-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.play-button {
+    width: 90px;
+    height: 90px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.play-triangle {
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 20px solid #000000;
+    margin-left: 5px;
+}
+
+/* Hover Effects applied to the link */
+.play-button-link:hover .play-button-outer {
+    transform: scale(1.1);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.play-button-link:hover .play-button {
+    background-color: #f0f0f0;
+}
+
+:root {
+  --text-dark: #333;
+  --text-light: #777;
+}
+
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif; /* Use a serif font for that elegant look */
+}
+
+.testimonial-section {
+  padding: 100px 20px;
+  text-align: center;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Background Image Watermark */
+.image-watermark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Cover the area with the background image */
+  height: 100%;
+  background-image: url('https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/testimonials-background.png?id=74'); /* Replace with your image file name/path */
+  background-size: contain; /* Shrinks/stretches image to fit */
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 10; /* Sets transparency like a watermark */
+  z-index: 2; /* Puts the image behind the text content */
+
+}
+
+/* Main Content Layering */
+.title, .quote, .author, .navigation {
+  position: relative;
+  z-index: 2; /* Keeps text above the watermark */
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--text-dark);
+  margin-bottom: 30px;
+}
+
+.title em {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.quote {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text-light);
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.author {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--text-dark);
+  margin-bottom: 30px;
+}
+
+/* Navigation Arrows */
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.nav-btn {
+  background: white;
+  border: 1px solid #be4848;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: #f9f9f9;
+  border-color: #333;
+}
+
+
+
+.map-section{
+  position: relative;
+}
+.map iframe{
+  width: 100%;
+  height: 400px;
+}
+    .form{
+        position:absolute;
+        width: 80%;
+        height: 400px;
+        top:250px; 
+        left:50%;
+        transform:translateX(-50%);
+        background:white;
+        padding:40px;
+        display:flex;
+        justify-content:space-between;
+        gap:40px;
+        box-shadow:0 5px 20px rgba(0,0,0,0.2);
+    }
+    .rightside{
+        width:60%;
+        text-align: center;   
+    }
+    .rightside span{
+        margin-bottom:20px ;
+        font-family: Playfair Display,sans-serif;
+        color: #282828;
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    .rightside p{
+        margin-top: 20px;
+        font-family: Playfair Display,sans-serif;
+        font-size: 18px;
+        color: #565656;
+        margin-bottom: 10px;
+    }
+    .form input, .form textarea{
+        width:100%;
+        margin-bottom:35px;
+        padding:10px;
+        border:none;
+        border-bottom:1px solid black;
+    }
+    .form button{
+        padding:10px 20px;
+        border:1px solid black;
+        background:white;
+        cursor:pointer;
+    }
+    .gal{
+        width:70%;
+        margin-top: 100px;
+    }
+    .gall img{
+        margin-left: 340px;
+        width: 100%;
+        height: 400px;
+    }
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.chocolate-gallery {
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.gallery-grid {
+  display: grid;
+  /* Creates 3 equal columns */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; /* Space between the images */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 500px; /* Adjust height to match your design */
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  /* Ensures the image covers the area without distortion */
+  object-fit: cover; 
+  transition: transform 0.5s ease;
+}
+
+/* Subtle zoom effect on hover */
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-footer {
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    background-image: url('https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/footer-img.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Dark overlay to make text pop */
+.footer-overlay {
+    background: rgba(0, 0, 0, 0.4); 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif; /* Elegant serif font */
+    font-size: 60px;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+}
+
+.footer-info {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Social Icon Styling */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #f8c2ca; /* Soft pink from the image */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.social-circle:hover {
+    transform: scale(1.1);
+    background-color: #ffffff;
+}
+
+.social-circle i {
+    font-size: 16px;
+}
