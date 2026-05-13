@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Task</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#020312;
+    color:#fff;
+}
+
+.section{
+    width:100%;
+    min-height:100vh;
+    padding:60px 5%;
+}
+
+.section h1{
+    text-align:center;
+    font-size:52px;
+    font-weight:300;
+    margin-bottom:60px;
+    color:#f5f5f5;
+}
+
+.cards{
+    display:flex;
+    gap:24px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.card{
+    position:relative;
+    width:260px;
+    height:380px;
+    overflow:hidden;
+    cursor:pointer;
+    transition:0.4s ease;
+    border-radius:4px;
+}
+
+.card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.5s ease;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.15));
+}
+
+.content{
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    right:20px;
+    z-index:2;
+}
+
+.content h2{
+    font-size:15px;
+    line-height:1.5;
+    font-weight:500;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card:hover img{
+    transform:scale(1.08);
+}
+
+.view-all{
+    text-align:center;
+    margin-top:45px;
+}
+
+.view-all a{
+    color:#fff;
+    text-decoration:none;
+    font-size:28px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.view-all a span{
+    color:#ff8c32;
+}
+
+.view-all a:hover{
+    letter-spacing:1px;
+}
+
+
+</style>
+</head>
+<body>
+
+<section class="section">
+
+    <h1>Shaping the Future with AI at the Core</h1>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" alt="">
+
+            <div class="overlay"></div>
+
+            <div class="content">
+                <h2>
+                    Agentic AI in Manufacturing: The 5-Stage Blueprint for an Autonomous Industry
+                </h2>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" alt="">
+
+            <div class="overlay"></div>
+
+            <div class="content">
+                <h2>
+                    Professional Services in 2026: 5 Trends Powering the Next Frontier
+                </h2>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=1200&auto=format&fit=crop" alt="">
+
+            <div class="overlay"></div>
+
+            <div class="content">
+                <h2>
+                    The Future of the Hi-Tech Industry: 6 Trends That Will Define 2026
+                </h2>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop" alt="">
+
+            <div class="overlay"></div>
+
+            <div class="content">
+                <h2>
+                    How Gen AI and Agentic AI Are Transforming the London Market Insurance Lifecycle
+                </h2>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1200&auto=format&fit=crop" alt="">
+
+            <div class="overlay"></div>
+
+            <div class="content">
+                <h2>
+                    Agentic AI in CPG: Turning the Back Office into the Frontline
+                </h2>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="view-all">
+        <a href="#">View All</a>
+    </div>
+
+</section>
+
+</body>
+</html>
