@@ -1,0 +1,1497 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* 
+   HEADER
+ */
+
+header{
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#111827;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    box-shadow:0 4px 10px rgba(0,0,0,0.5);
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#00ffcc;
+    animation:glow 2s infinite alternate;
+}
+
+/* 
+   NAVIGATION
+ */
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:25px;
+    transition:0.4s;
+}
+
+nav ul li a:hover{
+    color:#00ffcc;
+}
+
+/* 
+   HAMBURGER MENU
+ */
+
+#menu-toggle{
+    display:none;
+}
+
+.hamburger{
+    display:none;
+    flex-direction:column;
+    gap:6px;
+    cursor:pointer;
+}
+
+.hamburger span{
+    width:30px;
+    height:3px;
+    background:white;
+    border-radius:5px;
+    transition:0.4s;
+}
+
+
+/* ===================================== */
+/* MARKET NEWS SECTION */
+/* ===================================== */
+
+.market-news{
+    width:100%;
+    min-height:100vh;
+    background:#050816;
+    padding:80px 5%;
+    overflow:hidden;
+}
+
+/* ===================================== */
+/* TITLE */
+/* ===================================== */
+
+.news-title{
+    text-align:center;
+    color:#fff;
+    font-size:4rem;
+    margin-bottom:20px;
+    animation:titleLeft 2s ease;
+}
+
+.news-subtitle{
+    text-align:center;
+    color:#cccccc;
+    font-size:1.2rem;
+    margin-bottom:80px;
+    animation:titleRight 2s ease;
+}
+
+/* ===================================== */
+/* NEWS CONTAINER */
+/* ===================================== */
+
+.news-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+/* ===================================== */
+/* NEWS BOX */
+/* ===================================== */
+
+.news-box{
+    width:350px;
+    height:450px;
+    position:relative;
+    overflow:hidden;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.6s;
+    display:flex;
+    align-items:flex-end;
+    padding:30px;
+}
+
+/* ===================================== */
+/* DIFFERENT BACKGROUNDS */
+/* ===================================== */
+
+.news-one{
+    background:url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop");
+    background-size:cover;
+    background-position:center;
+    animation:slideLeft 2s ease;
+}
+
+.news-two{
+    background:url("https://images.unsplash.com/photo-1618044733300-9472054094ee?q=80&w=1200&auto=format&fit=crop");
+    background-size:cover;
+    background-position:center;
+    animation:rotateEntry 2s ease;
+}
+
+.news-three{
+    background:url("https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1200&auto=format&fit=crop");
+    background-size:cover;
+    background-position:center;
+    animation:slideBottom 2s ease;
+}
+
+/* ===================================== */
+/* OVERLAY */
+/* ===================================== */
+
+.news-overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.55);
+}
+
+/* ===================================== */
+/* CONTENT */
+/* ===================================== */
+
+.news-content{
+    position:relative;
+    z-index:2;
+}
+
+.news-content h2{
+    color:#fff;
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+.news-content p{
+    color:#f1f1f1;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.news-content span{
+    color:#ffd700;
+    font-weight:bold;
+}
+
+/* ===================================== */
+/* HOVER EFFECTS */
+/* ===================================== */
+
+/* NEWS 1 */
+
+.news-one:hover{
+    transform:translateY(-20px) scale(1.05);
+    box-shadow:0 0 40px rgba(0,255,255,0.6);
+}
+
+/* NEWS 2 */
+
+.news-two:hover{
+    transform:rotate(5deg) scale(1.05);
+    box-shadow:0 0 40px rgba(255,0,150,0.6);
+}
+
+/* NEWS 3 */
+
+.news-three:hover{
+    transform:scale(1.08);
+    filter:brightness(1.2);
+    box-shadow:0 0 40px rgba(255,140,0,0.7);
+}
+
+/* ===================================== */
+/* TITLE ANIMATIONS */
+/* ===================================== */
+
+@keyframes titleLeft{
+
+    from{
+        opacity:0;
+        transform:translateX(-300px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+@keyframes titleRight{
+
+    from{
+        opacity:0;
+        transform:translateX(300px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+/* ===================================== */
+/* NEWS ENTRY ANIMATIONS */
+/* ===================================== */
+
+@keyframes slideLeft{
+
+    from{
+        opacity:0;
+        transform:translateX(-400px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+@keyframes rotateEntry{
+
+    from{
+        opacity:0;
+        transform:rotate(-180deg) scale(0);
+    }
+
+    to{
+        opacity:1;
+        transform:rotate(0) scale(1);
+    }
+
+}
+
+@keyframes slideBottom{
+
+    from{
+        opacity:0;
+        transform:translateY(400px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ===================================== */
+/* SCAM NEWS SECTION */
+/* ===================================== */
+
+.scam-news-section{
+    width:100%;
+    min-height:100vh;
+    background:#030303;
+    padding:80px 5%;
+    overflow:hidden;
+}
+
+/* ===================================== */
+/* TITLE */
+/* ===================================== */
+
+.scam-title{
+    text-align:center;
+    color:#ffcc00;
+    font-size:4rem;
+    margin-bottom:20px;
+    letter-spacing:4px;
+    animation:flashEntry 2s ease;
+}
+
+.scam-subtitle{
+    text-align:center;
+    color:#bbbbbb;
+    font-size:1.2rem;
+    margin-bottom:100px;
+    animation:blurReveal 2s ease;
+}
+
+/* ===================================== */
+/* CONTAINER */
+/* ===================================== */
+
+.scam-news-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:40px;
+}
+
+/* ===================================== */
+/* NEWS BOX */
+/* ===================================== */
+
+.scam-news{
+    width:320px;
+    height:420px;
+    position:relative;
+    overflow:hidden;
+    border-radius:25px;
+    padding:35px;
+    cursor:pointer;
+    transition:0.6s;
+    background:#111;
+}
+
+/* ===================================== */
+/* DIFFERENT BACKGROUNDS */
+/* ===================================== */
+
+.news-a{
+    background:linear-gradient(135deg,#2c3e50,#4ca1af);
+    animation:zigzagEntry 2s ease;
+}
+
+.news-b{
+    background:linear-gradient(135deg,#42275a,#734b6d);
+    animation:flipDrop 2s ease;
+}
+
+.news-c{
+    background:linear-gradient(135deg,#141e30,#243b55);
+    animation:spiralEntry 2s ease;
+}
+
+.news-d{
+    background:linear-gradient(135deg,#000428,#004e92);
+    animation:waveEntry 2s ease;
+}
+
+/* ===================================== */
+/* CONTENT */
+/* ===================================== */
+
+.scam-content{
+    position:relative;
+    z-index:2;
+}
+
+.scam-content h2{
+    color:#fff;
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+.scam-content p{
+    color:#eeeeee;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.scam-content span{
+    color:#ffcc00;
+    font-weight:bold;
+}
+
+/* ===================================== */
+/* UNIQUE HOVER EFFECTS */
+/* ===================================== */
+
+/* NEWS A */
+
+.news-a:hover{
+    clip-path:polygon(0 0,100% 0,90% 100%,0 90%);
+    transform:scale(1.05);
+    box-shadow:0 0 40px #4ca1af;
+}
+
+/* NEWS B */
+
+.news-b:hover{
+    transform:perspective(800px) rotateY(20deg);
+    box-shadow:0 0 40px #d76d77;
+}
+
+/* NEWS C */
+
+.news-c:hover{
+    filter:hue-rotate(120deg);
+    transform:rotate(-3deg) scale(1.08);
+    box-shadow:0 0 40px #00c6ff;
+}
+
+/* NEWS D */
+
+.news-d:hover{
+    transform:skew(-5deg,-5deg) scale(1.05);
+    box-shadow:0 0 40px #00f2fe;
+}
+
+/* ===================================== */
+/* TITLE EFFECTS */
+/* ===================================== */
+
+@keyframes flashEntry{
+
+    0%{
+        opacity:0;
+        letter-spacing:25px;
+        transform:scale(0);
+    }
+
+    100%{
+        opacity:1;
+        letter-spacing:4px;
+        transform:scale(1);
+    }
+
+}
+
+@keyframes blurReveal{
+
+    from{
+        opacity:0;
+        filter:blur(20px);
+    }
+
+    to{
+        opacity:1;
+        filter:blur(0);
+    }
+
+}
+
+/* ===================================== */
+/* UNIQUE ENTRY ANIMATIONS */
+/* ===================================== */
+
+@keyframes zigzagEntry{
+
+    0%{
+        opacity:0;
+        transform:translateX(-400px) translateY(-100px);
+    }
+
+    50%{
+        transform:translateX(100px) translateY(50px);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateX(0) translateY(0);
+    }
+
+}
+
+@keyframes flipDrop{
+
+    0%{
+        opacity:0;
+        transform:rotateX(180deg) translateY(-300px);
+    }
+
+    100%{
+        opacity:1;
+        transform:rotateX(0) translateY(0);
+    }
+
+}
+
+@keyframes spiralEntry{
+
+    0%{
+        opacity:0;
+        transform:rotate(720deg) scale(0);
+    }
+
+    100%{
+        opacity:1;
+        transform:rotate(0) scale(1);
+    }
+
+}
+
+@keyframes waveEntry{
+
+    0%{
+        opacity:0;
+        transform:translateY(300px) skewY(15deg);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateY(0) skewY(0);
+    }
+
+}
+
+/* ===================================== */
+/* TRADERS SECTION */
+/* ===================================== */
+
+.traders-section{
+    width:100%;
+    min-height:100vh;
+    background:#040814;
+    padding:80px 6%;
+    overflow:hidden;
+}
+
+/* ===================================== */
+/* TITLE */
+/* ===================================== */
+
+.traders-title{
+    text-align:center;
+    color:#ffffff;
+    font-size:4rem;
+    margin-bottom:20px;
+    letter-spacing:3px;
+    animation:titleSplit 2s ease;
+}
+
+.traders-subtitle{
+    text-align:center;
+    color:#bbbbbb;
+    font-size:1.2rem;
+    margin-bottom:100px;
+    animation:blurUp 2s ease;
+}
+
+/* ===================================== */
+/* TRADER ROW */
+/* ===================================== */
+
+.trader{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:80px;
+    position:relative;
+}
+
+/* ===================================== */
+/* IMAGE */
+/* ===================================== */
+
+.trader-image{
+    width:320px;
+    height:320px;
+    overflow:hidden;
+    border-radius:50%;
+    position:relative;
+}
+
+/* ===================================== */
+/* IMAGE STYLE */
+/* ===================================== */
+
+.trader-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.6s;
+}
+
+/* ===================================== */
+/* CONTENT */
+/* ===================================== */
+
+.trader-content{
+    width:55%;
+}
+
+.trader-content h2{
+    color:#ffffff;
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.trader-content p{
+    color:#dddddd;
+    font-size:1.1rem;
+    line-height:1.9;
+}
+
+/* ===================================== */
+/* UNIQUE ANIMATIONS */
+/* ===================================== */
+
+/* TRADER 1 */
+
+.trader-one{
+    animation:waveSlide 2s ease;
+}
+
+.trader-one:hover .trader-image img{
+    filter:grayscale(100%);
+    clip-path:polygon(0 0,100% 10%,90% 100%,10% 90%);
+}
+
+/* TRADER 2 */
+
+.trader-two{
+    flex-direction:row-reverse;
+    animation:circleReveal 2s ease;
+}
+
+.trader-two:hover .trader-image img{
+    filter:contrast(180%);
+    border-radius:20%;
+}
+
+/* TRADER 3 */
+
+.trader-three{
+    animation:stretchEntry 2s ease;
+}
+
+.trader-three:hover .trader-image img{
+    filter:sepia(100%);
+    clip-path:ellipse(40% 60% at 50% 50%);
+}
+
+/* ===================================== */
+/* TITLE ANIMATIONS */
+/* ===================================== */
+
+@keyframes titleSplit{
+
+    0%{
+        opacity:0;
+        letter-spacing:30px;
+    }
+
+    100%{
+        opacity:1;
+        letter-spacing:3px;
+    }
+
+}
+
+@keyframes blurUp{
+
+    0%{
+        opacity:0;
+        filter:blur(15px);
+        transform:translateY(100px);
+    }
+
+    100%{
+        opacity:1;
+        filter:blur(0);
+        transform:translateY(0);
+    }
+
+}
+
+/* ===================================== */
+/* TRADER ENTRY EFFECTS */
+/* ===================================== */
+
+@keyframes waveSlide{
+
+    0%{
+        opacity:0;
+        transform:translateX(-300px) skewX(20deg);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateX(0) skewX(0);
+    }
+
+}
+
+@keyframes circleReveal{
+
+    0%{
+        opacity:0;
+        clip-path:circle(0% at 50% 50%);
+    }
+
+    100%{
+        opacity:1;
+        clip-path:circle(100% at 50% 50%);
+    }
+
+}
+
+@keyframes stretchEntry{
+
+    0%{
+        opacity:0;
+        transform:scaleX(0);
+    }
+
+    100%{
+        opacity:1;
+        transform:scaleX(1);
+    }
+
+}
+
+/* ===================================== */
+/* MARKET HISTORY */
+/* ===================================== */
+
+.market-history{
+    width:100%;
+    min-height:100vh;
+    background:#020617;
+    padding:100px 8%;
+    overflow:hidden;
+    position:relative;
+}
+
+/* ===================================== */
+/* TITLE */
+/* ===================================== */
+
+.market-title{
+    text-align:center;
+    color:#ffffff;
+    font-size:4rem;
+    margin-bottom:20px;
+    text-transform:uppercase;
+    animation:glitchText 2s ease;
+}
+
+.market-subtitle{
+    text-align:center;
+    color:#aaaaaa;
+    font-size:1.2rem;
+    margin-bottom:120px;
+    animation:neonFade 2s ease;
+}
+
+/* ===================================== */
+/* TIMELINE */
+/* ===================================== */
+
+.timeline{
+    position:relative;
+    width:100%;
+}
+
+/* CENTER LINE */
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    width:6px;
+    height:100%;
+    background:linear-gradient(to bottom,#00ffee,#ff00ff,#00ff66);
+    transform:translateX(-50%);
+    border-radius:20px;
+    animation:lineGlow 2s infinite alternate;
+}
+
+/* ===================================== */
+/* TIMELINE ITEM */
+/* ===================================== */
+
+.timeline-item{
+    width:45%;
+    padding:40px;
+    margin-bottom:100px;
+    position:relative;
+    border-radius:30px;
+    backdrop-filter:blur(10px);
+    background:rgba(255,255,255,0.05);
+    border:2px solid rgba(255,255,255,0.1);
+    overflow:hidden;
+}
+
+/* LEFT & RIGHT */
+
+.item-one,
+.item-three{
+    left:0;
+}
+
+.item-two,
+.item-four{
+    left:55%;
+}
+
+/* ===================================== */
+/* YEAR */
+/* ===================================== */
+
+.year{
+    position:absolute;
+    top:25px;
+    right:30px;
+    font-size:2.5rem;
+    font-weight:bold;
+    color:#00ffee;
+    letter-spacing:3px;
+}
+
+/* ===================================== */
+/* CONTENT */
+/* ===================================== */
+
+.timeline-content h2{
+    color:#ffffff;
+    font-size:2.2rem;
+    margin-bottom:20px;
+}
+
+.timeline-content p{
+    color:#dddddd;
+    line-height:1.9;
+    font-size:1.05rem;
+}
+
+/* ===================================== */
+/* UNIQUE COLORS */
+/* ===================================== */
+
+.item-one{
+    border-left:8px solid #00ffee;
+    animation:floatLeft 2s ease;
+}
+
+.item-two{
+    border-right:8px solid #ff00ff;
+    animation:digitalDrop 2s ease;
+}
+
+.item-three{
+    border-left:8px solid #00ff66;
+    animation:elasticMove 2s ease;
+}
+
+.item-four{
+    border-right:8px solid #ff9900;
+    animation:spinReveal 2s ease;
+}
+
+/* ===================================== */
+/* HOVER EFFECTS */
+/* ===================================== */
+
+.item-one:hover{
+    transform:translateY(-20px);
+    clip-path:polygon(0 0,100% 0,90% 100%,0 90%);
+}
+
+.item-two:hover{
+    letter-spacing:1px;
+    filter:hue-rotate(90deg);
+}
+
+.item-three:hover{
+    transform:skewY(-3deg);
+    clip-path:polygon(10% 0,100% 10%,90% 100%,0 90%);
+}
+
+.item-four:hover{
+    transform:translateX(-15px);
+    filter:brightness(130%);
+}
+
+/* ===================================== */
+/* DOTS */
+/* ===================================== */
+
+.timeline-item::before{
+    content:"";
+    position:absolute;
+    width:25px;
+    height:25px;
+    background:#ffffff;
+    border-radius:50%;
+    top:50px;
+}
+
+/* LEFT DOT */
+
+.item-one::before,
+.item-three::before{
+    right:-58px;
+}
+
+/* RIGHT DOT */
+
+.item-two::before,
+.item-four::before{
+    left:-58px;
+}
+
+/* ===================================== */
+/* ANIMATIONS */
+/* ===================================== */
+
+@keyframes glitchText{
+
+    0%{
+        opacity:0;
+        transform:translateY(-100px);
+        filter:blur(10px);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateY(0);
+        filter:blur(0);
+    }
+
+}
+
+@keyframes neonFade{
+
+    0%{
+        opacity:0;
+        letter-spacing:15px;
+    }
+
+    100%{
+        opacity:1;
+        letter-spacing:1px;
+    }
+
+}
+
+@keyframes lineGlow{
+
+    from{
+        box-shadow:0 0 10px #00ffee;
+    }
+
+    to{
+        box-shadow:0 0 30px #ff00ff;
+    }
+
+}
+
+@keyframes floatLeft{
+
+    0%{
+        opacity:0;
+        transform:translateX(-300px) rotate(-10deg);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateX(0) rotate(0);
+    }
+
+}
+
+@keyframes digitalDrop{
+
+    0%{
+        opacity:0;
+        transform:translateY(-300px);
+        filter:blur(15px);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateY(0);
+        filter:blur(0);
+    }
+
+}
+
+@keyframes elasticMove{
+
+    0%{
+        opacity:0;
+        transform:scale(0) translateX(-200px);
+    }
+
+    70%{
+        transform:scale(1.1);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+@keyframes spinReveal{
+
+    0%{
+        opacity:0;
+        transform:rotate(360deg) scale(0);
+    }
+
+    100%{
+        opacity:1;
+        transform:rotate(0) scale(1);
+    }
+
+}
+
+/* ===================================== */
+/* FUTURE SECTION */
+/* ===================================== */
+
+.future-section{
+    width:100%;
+    height:100vh;
+    background:#060606;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+}
+
+
+/* ===================================== */
+/* GLASS BOX */
+/* ===================================== */
+
+.future-glass{
+    width:70%;
+    padding:80px;
+    text-align:center;
+    border-radius:40px;
+    position:relative;
+    overflow:hidden;
+    background:rgba(255,215,0,0.08);
+    margin-left: 230px;
+    backdrop-filter:blur(20px);
+
+    border:2px solid rgba(255,215,0,0.4);
+
+    box-shadow:
+    0 0 30px rgba(255,215,0,0.3),
+    inset 0 0 25px rgba(255,255,255,0.08);
+
+    animation:glassEntry 2s ease;
+}
+
+/* ===================================== */
+/* SHINING LINE */
+/* ===================================== */
+
+.future-glass::before{
+    content:"";
+    position:absolute;
+    top:-100%;
+    left:-40%;
+    width:40%;
+    height:300%;
+    background:rgba(255,255,255,0.2);
+    transform:rotate(25deg);
+
+    animation:shineMove 5s linear infinite;
+}
+
+/* ===================================== */
+/* HEADING */
+/* ===================================== */
+
+.future-glass h1{
+    color:#ffffff;
+    font-size:5rem;
+    line-height:1.3;
+    margin-bottom:30px;
+    text-transform:uppercase;
+    letter-spacing:4px;
+    animation:textPulse 3s infinite alternate;
+}
+
+/* GOLD TEXT */
+
+.future-glass h1 span{
+    display:block;
+    color:#ffd700;
+    margin-top:10px;
+}
+
+/* ===================================== */
+/* PARAGRAPH */
+/* ===================================== */
+
+.future-glass p{
+    color:#dddddd;
+    font-size:1.3rem;
+    line-height:2;
+    margin-bottom:40px;
+}
+
+/* ===================================== */
+/* BUTTON */
+/* ===================================== */
+
+.future-glass button{
+    padding:18px 45px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(135deg,#ffd700,#ff9900);
+    color:#111;
+    font-size:1rem;
+    font-weight:bold;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+    transition:0.5s;
+}
+
+/* BUTTON HOVER */
+
+.future-glass button:hover{
+    letter-spacing:3px;
+    transform:translateY(-10px);
+}
+
+
+/* ===================================== */
+/* GLASS ENTRY */
+/* ===================================== */
+
+@keyframes glassEntry{
+
+    0%{
+        opacity:0;
+        transform:scale(0.5) rotateX(90deg);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1) rotateX(0);
+    }
+
+}
+
+/* ===================================== */
+/* SHINE EFFECT */
+/* ===================================== */
+
+@keyframes shineMove{
+
+    0%{
+        left:-50%;
+    }
+
+    100%{
+        left:140%;
+    }
+
+}
+
+/* ===================================== */
+/* TEXT PULSE */
+/* ===================================== */
+
+@keyframes textPulse{
+
+    0%{
+        text-shadow:
+        0 0 10px #ffd700,
+        0 0 20px #ff9900;
+    }
+
+    100%{
+        text-shadow:
+        0 0 30px #ffd700,
+        0 0 60px #ff9900;
+    }
+
+}
+
+
+/*
+   RESPONSIVE MEDIA QUERIES
+ */
+
+
+/*
+   1400px - DESKTOP SCREENS
+*/
+
+@media screen and (max-width:1400px){
+
+    .hero h1{
+        font-size:56px;
+    }
+
+    .section h2{
+        font-size:40px;
+    }
+}
+
+
+/*
+   1200px - LAPTOP SCREENS
+ */
+
+@media screen and (max-width:1200px){
+
+    header{
+        padding:18px 5%;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .cards{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+
+/*
+   992px - SMALL LAPTOP / TABLET SCREENS
+ */
+
+@media screen and (max-width:992px){
+
+    .hero{
+        height:auto;
+        padding:140px 20px 80px;
+    }
+
+    .hero h1{
+        font-size:46px;
+    }
+
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+
+/* 
+   768px - TABLET & MOBILE NAVIGATION
+ */
+
+@media screen and (max-width:768px){
+
+    .hamburger{
+        display:flex;
+    }
+
+    nav{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#111827;
+        max-height:0;
+        overflow:hidden;
+        transition:0.5s;
+    }
+
+    nav ul{
+        flex-direction:column;
+        align-items:center;
+        padding:25px 0;
+        gap:20px;
+    }
+
+    #menu-toggle:checked ~ nav{
+        max-height:500px;
+    }
+
+    #menu-toggle:checked + .hamburger span:nth-child(1){
+        transform:rotate(45deg) translate(7px,7px);
+    }
+
+    #menu-toggle:checked + .hamburger span:nth-child(2){
+        opacity:0;
+    }
+
+    #menu-toggle:checked + .hamburger span:nth-child(3){
+        transform:rotate(-45deg) translate(6px,-6px);
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .footer-container{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+}
+
+/* 
+   FOOTER
+ */
+
+footer{
+    background:#111827;
+    padding:70px 8% 20px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+    margin-bottom:40px;
+}
+
+.footer-logo h2{
+    font-size:45px;
+    color:#00ffcc;
+    margin-bottom:15px;
+}
+
+.footer-logo p{
+    color:#cbd5e1;
+    line-height:1.7;
+     font-size: 25px;
+}
+
+.footer-links h3,
+.footer-contact h3{
+    font-size:35px;
+    margin-bottom:20px;
+}
+
+.footer-links ul{
+    list-style:none;
+}
+
+.footer-links ul li{
+    margin-bottom:12px;
+}
+
+.footer-links ul li a{
+    text-decoration:none;
+    color:#cbd5e1;
+    transition:0.4s;
+    font-size: 25px;
+}
+
+.footer-links ul li a:hover{
+    color:#00ffcc;
+    padding-left:8px;
+}
+
+.footer-contact p{
+    color:#cbd5e1;
+    margin-bottom:12px;
+     font-size: 25px;
+}
+
+.footer-contact a{
+    text-decoration:none;
+    color:#00ffcc;
+    font-size:25px;
+}
+
+.footer-phone{
+    margin-top:20px;
+     font-size: 25px;
+}
+
+.footer-bottom{
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,0.1);
+    padding-top:20px;
+    font-size: 25px;
+}
+
+.footer-bottom p{
+    color:#94a3b8;
+}
+
+
+/* 
+   576px - MOBILE SCREENS
+ */
+
+@media screen and (max-width:576px){
+
+    .hamburger{
+        display:flex;
+    }
+
+    nav{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#111827;
+        max-height:0;
+        overflow:hidden;
+        transition:0.5s;
+    }
+
+    nav ul{
+        flex-direction:column;
+        align-items:center;
+        padding:25px 0;
+        gap:20px;
+    }
+
+    #menu-toggle:checked ~ nav{
+        max-height:500px;
+    }
+
+    #menu-toggle:checked + .hamburger span:nth-child(1){
+        transform:rotate(45deg) translate(7px,7px);
+    }
+
+    #menu-toggle:checked + .hamburger span:nth-child(2){
+        opacity:0;
+    }
+
+    #menu-toggle:checked + .hamburger span:nth-child(3){
+        transform:rotate(-45deg) translate(6px,-6px);
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .footer-container{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+}
