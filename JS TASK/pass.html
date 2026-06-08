@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>entry pass</title>
+</head>
+<body>
+    <script>
+        
+        // AND //
+let hasID1 = "yes";
+let hasTicket1 = "yes";
+let age1 = 20;
+if (hasID1 == "yes" && hasTicket1 == "yes" && age1 >= 18) {
+    console.log("Entry Allowed");
+} else {
+    console.log("Entry Denied");
+}
+
+
+        // OR // 
+
+let hasID2 = "no";
+let hasTicket2 = "yes";
+let age2 = 16;
+if (hasID2 == "yes" || hasTicket2 == "yes" || age2 >= 18) {
+    console.log("Entry Allowed");
+} else {
+    console.log("Entry Denied");
+}
+
+
+        // BOTH //
+     
+let hasID = "yes";
+let hasTicket = "no";
+let age = 20;
+if (hasID == "yes" && (hasTicket == "yes" || age >= 18)) {
+    console.log("Entry Allowed");
+} else {
+    console.log("Entry Denied");
+}
+</script>
+
+</body>
+</html>
