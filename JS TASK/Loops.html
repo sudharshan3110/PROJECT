@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops</title>
+</head>
+<body>
+    <script>
+        //FOR LOOP//
+//Multiplication Table of 2//
+for (let i = 1; i <= 10; i++) {
+    console.log("2 x " + i + " = " + (2 * i));
+}
+     //Numbers from 10 to 1//
+for (let i = 10; i >= 1; i--) {
+    console.log(i);
+}
+
+        //WHILE LOOP//
+//Odd Numbers from 1 to 9//
+let i = 1;
+
+while (i <= 9) {
+    console.log(i);
+    i += 2;
+}
+//Numbers from 20 to 16//
+let u = 20;
+
+while (u >= 16) {
+    console.log(u);
+    u--;
+}
+
+     //DO WHILE LOOP//
+//Multiples of 3 up to 15//
+let y = 3;
+
+do {
+    console.log(y);
+    y += 3;
+} while (y <= 15);
+//Numbers from 7 to 3//
+let z = 7;
+do {
+    console.log(z);
+    z--;
+} while (z >= 3);
+
+         //FOR OF LOOP//
+let subjects = ["Maths", "Science", "English"];
+
+for (let subject of subjects) {
+    console.log(subject);
+}
+
+let word = "HELLO";
+
+for (let letter of word) {
+    console.log(letter);
+}
+
+            //FOR IN LOOP//
+let employee = {
+    id: 101,
+    name: "John",
+    department: "IT"
+};
+
+for (let key in employee) {
+    console.log(key);
+}
+
+let cities = ["Nellore", "Hyd", "Chennai"];
+
+for (let index in cities) {
+    console.log(index);
+}
+ 
+     //FOR EACH//
+let colors = ["Red", "Green", "Blue"];
+
+colors.forEach(function(color) {
+    console.log(color);
+});
+
+let mobiles = ["Samsung", "Apple", "OnePlus"];
+
+mobiles.forEach(function(mobile) {
+    console.log(mobile);
+});
+
+    </script>
+</body>
+</html>
