@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>strings</title>
+</head>
+<body>
+    <script>
+        //slice//
+let name = "JavaScript";
+
+console.log(name.slice(0, 4)); // Java
+
+let email = "user@gmail.com";
+
+console.log(email.slice(email.indexOf("@") + 1)); // gmail.com
+
+        //substr//
+let code = "EMP2025";
+
+console.log(code.substr(0, 3)); // EMP
+
+let mobile = "9390305470";
+
+console.log(mobile.substr(6, 4)); // 5470
+
+   //replace//
+let msg = "I like tea";
+
+console.log(msg.replace("tea", "coffee"));
+
+let city = "I live in Nellore";
+
+console.log(city.replace("Nellore", "Hyderabad"));
+
+  //replaceall//
+let text = "apple apple apple";
+
+console.log(text.replaceAll("apple", "mango"));
+
+let sentence = "JS is easy. JS is powerful.";
+
+console.log(sentence.replaceAll("JS", "JavaScript"));
+
+    //toUpperCase//
+let names = "sudharshan";
+
+console.log(names.toUpperCase());
+
+let country = "india";
+
+console.log(country.toUpperCase());
+
+    //toLowerCase//
+let cityy = "NELLORE";
+
+console.log(cityy.toLowerCase());
+
+let favourite = "COFFEE";
+
+console.log(favourite.toLowerCase());
+
+         //concat//
+let firstName = "Sudharshan";
+let lastName = "Kuppam";
+
+console.log(firstName.concat(" ", lastName));
+
+let town = "Nellore";
+let state = "Andhra Pradesh";
+
+console.log(town.concat(", ", state));
+
+     //trim// removes extra spaces from the beginning and end of a string.
+let username = "   Sudharshan   ";
+
+console.log(username.trim());
+
+let course = "   JavaScript   ";
+
+console.log(course.trim());
+
+     //trimstart//
+let textt = "     Hello";
+
+console.log(textt.trimStart());
+
+let id = "     EMP101";
+
+console.log(id.trimStart());
+
+         //trimEnd//
+let texts = "Hello     ";
+
+console.log(texts.trimEnd());
+
+let product = "Laptop      ";
+
+console.log(product.trimEnd());
+
+          //charAt//
+let namess = "JavaScript";
+
+console.log(namess.charAt(0)); // J
+
+let cityyy = "Nellore";
+
+console.log(cityyy.charAt(3)); // l
+
+           //split//
+let fruits = "Apple,Mango,Banana";
+
+console.log(fruits.split(","));
+
+let sentences = "JavaScript is easy";
+
+console.log(sentences.split(" "));
+
+         //indexOf//
+let emaill = "user@gmail.com";
+
+console.log(emaill.indexOf("@"));
+
+let language = "JavaScript";
+
+console.log(language.indexOf("Script"));
+    </script>
+</body>
+</html>
