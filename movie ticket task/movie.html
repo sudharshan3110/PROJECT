@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TICKET</title>
+</head>
+<body>
+    <script>
+        let age = Number(prompt("Enter your age:"));
+let showtime = prompt("Enter showtime (matinee/evening):").toLowerCase();
+
+let ticketPrice;
+
+if (isNaN(age) || age < 0) {
+    console.log("Invalid age entered.");
+}
+else if (age < 12) {
+    ticketPrice = 5;
+    console.log("Child Ticket Price: $" + ticketPrice);
+}
+else if (age >= 65) {
+    ticketPrice = 7;
+    console.log("Senior Citizen Ticket Price: $" + ticketPrice);
+}
+else if (showtime === "matinee") {
+    ticketPrice = 10;
+    console.log("Adult Matinee Ticket Price: $" + ticketPrice);
+}
+else {
+    ticketPrice = 15;
+    console.log("Adult Evening Ticket Price: $" + ticketPrice);
+}
+    </script>
+    
+</body>
+</html>
