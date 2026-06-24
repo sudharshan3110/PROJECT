@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Pizza Order</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#f7ecd2;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+    }
+
+    .container{
+      width:900px;
+      background:#f6e8c5;
+      padding:30px;
+      border-radius:15px;
+      display:flex;
+      justify-content:space-between;
+      box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .left{
+      width:50%;
+    }
+
+    .right{
+      width:35%;
+    }
+
+    h1{
+      font-size:32px;
+      margin-bottom:20px;
+    }
+
+    h2{
+      margin-top:20px;
+      margin-bottom:10px;
+    }
+
+    select{
+      width:100%;
+      padding:10px;
+      font-size:18px;
+      border-radius:8px;
+      border:2px solid #444;
+    }
+
+    .sizes{
+      display:flex;
+      gap:10px;
+      margin-top:10px;
+    }
+
+    .size-btn{
+      padding:10px 25px;
+      border:2px solid #444;
+      background:white;
+      cursor:pointer;
+      border-radius:8px;
+      font-size:18px;
+    }
+
+    .active{
+      background:#ff7043;
+      color:white;
+      border:none;
+    }
+
+    .toppings{
+      margin-top:15px;
+    }
+
+    .toppings label{
+      display:block;
+      margin-bottom:10px;
+      font-size:20px;
+    }
+
+    .receipt{
+      background:white;
+      padding:25px;
+      border-radius:10px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .receipt h2{
+      text-align:center;
+      margin-bottom:20px;
+    }
+
+    .receipt p{
+      font-size:20px;
+      margin:12px 0;
+      display:flex;
+      justify-content:space-between;
+    }
+
+    .total{
+      font-size:35px;
+      font-weight:bold;
+      color:black;
+      text-align:center;
+      margin-top:20px;
+    }
+
+    button{
+      width:100%;
+      padding:15px;
+      margin-top:20px;
+      background:green;
+      color:white;
+      border:none;
+      border-radius:8px;
+      font-size:20px;
+      cursor:pointer;
+    }
+
+    button:hover{
+      background:darkgreen;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- LEFT SIDE -->
+    <div class="left">
+
+      <h1> BUILD YOUR SMART PIZZA</h1>
+
+      <h2>CRUST</h2>
+
+      <select id="crust" onchange="calculateTotal()">
+        <option value="8">Thin ($8)</option>
+        <option value="10">Regular ($10)</option>
+        <option value="12">Stuffed ($12)</option>
+      </select>
+
+      <h2>SIZE</h2>
+
+      <div class="sizes">
+        <button class="size-btn" onclick="setSize(0,this)">Small</button>
+        <button class="size-btn" onclick="setSize(2,this)">Medium</button>
+        <button class="size-btn active" onclick="setSize(4,this)">Large</button>
+      </div>
+
+      <h2>TOPPINGS</h2>
+
+      <div class="toppings">
+
+        <label>
+          <input type="checkbox" class="top" value="1" checked onchange="calculateTotal()">
+          Cheese
+        </label>
+
+        <label>
+          <input type="checkbox" class="top" value="1" checked onchange="calculateTotal()">
+          Mushrooms
+        </label>
+
+        <label>
+          <input type="checkbox" class="top" value="1" checked onchange="calculateTotal()">
+          Peppers
+        </label>
+
+        <label>
+          <input type="checkbox" class="top" value="1" onchange="calculateTotal()">
+          Pepperoni
+        </label>
+
+        <label>
+          <input type="checkbox" class="top" value="1" onchange="calculateTotal()">
+          Chicken
+        </label>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right">
+
+      <div class="receipt">
+
+        <h2> YOUR RECEIPT</h2>
+
+        <p>
+          <span>Base:</span>
+          <span id="basePrice">$0</span>
+        </p>
+
+        <p>
+          <span>Toppings:</span>
+          <span id="toppingPrice">$0</span>
+        </p>
+
+        <p>
+          <span>Subtotal:</span>
+          <span id="subtotal">$0</span>
+        </p>
+
+        <p>
+          <span>Discount:</span>
+          <span>10%</span>
+        </p>
+
+        <div class="total">
+          Total: <span id="total">$0</span>
+        </div>
+
+      </div>
+
+      <button>PLACE ORDER</button>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    let sizePrice = 4;
+
+    function setSize(price, button){
+
+      sizePrice = price;
+
+      let buttons = document.querySelectorAll(".size-btn");
+
+      buttons.forEach(function(btn){
+        btn.classList.remove("active");
+      });
+
+      button.classList.add("active");
+
+      calculateTotal();
+    }
+
+    function calculateTotal(){
+
+      let crustPrice =
+      Number(document.getElementById("crust").value);
+
+      let toppingItems =
+      document.querySelectorAll(".top");
+
+      let toppingTotal = 0;
+
+      toppingItems.forEach(function(item){
+
+        if(item.checked){
+          toppingTotal =
+          toppingTotal + Number(item.value);
+        }
+
+      });
+
+      let base = crustPrice + sizePrice;
+
+      let subtotal = base + toppingTotal;
+
+      let total = subtotal - (subtotal * 0.10);
+
+      document.getElementById("basePrice").innerHTML =
+      "$" + base.toFixed(2);
+
+      document.getElementById("toppingPrice").innerHTML =
+      "$" + toppingTotal.toFixed(2);
+
+      document.getElementById("subtotal").innerHTML =
+      "$" + subtotal.toFixed(2);
+
+      document.getElementById("total").innerHTML =
+      "$" + total.toFixed(2);
+    }
+
+    calculateTotal();
+
+  </script>
+
+</body>
+</html>
